@@ -1,0 +1,14 @@
+services:
+  hdhomerun-epgxml:
+    container_name: hdhomerun-epgxml
+    image: curiouscocoon/hdhomerun-epgxml:latest
+    environment:
+      PUID: 1001
+      GUID: 1001
+      RUN_IMMEDIATELY: false
+      CRON_SCHEDULE: "00 03 * * *"
+      TZ: America/New_York
+    volumes:
+      - ./hdhomerun-epgxml/app/output:/app/output
+    network_mode: host # Required
+    restart: no
