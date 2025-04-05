@@ -22,8 +22,7 @@ WORKDIR /
 RUN apt update && \
     apt-get update
 
-RUN apt install -y makepasswd \
-    python3 \
+RUN apt install -y python3 \
     python3-pip \
     python3.12-venv
 RUN apt-get install -y cron
